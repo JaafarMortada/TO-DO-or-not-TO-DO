@@ -1,24 +1,7 @@
 import { Todos } from "../types";
 
 const todos: Todos = [
-  {
-    id: 1,
-    done: false,
-    text: "Complete homework",
-    time: new Date("2023-10-19T15:30:00"),
-  },
-  {
-    id: 2,
-    done: true,
-    text: "Buy groceries",
-    time: new Date("2023-10-20T10:00:00"),
-  },
-  {
-    id: 3,
-    done: false,
-    text: "Read a book",
-    time: new Date("2023-10-21T18:00:00"),
-  },
+  
 ];
 
 export default {
@@ -27,6 +10,9 @@ export default {
     return todos
   },
 
+  async addTodo() {
+    await wait(1000)
+  }
 }
 
 function wait(ms: number) {

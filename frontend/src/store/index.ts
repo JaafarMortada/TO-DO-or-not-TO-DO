@@ -17,13 +17,21 @@ export const useTodosStore = defineStore('todos',{
         async fetchTodos() {
             try {
                 const todoList = await todos.getTodos();
-                this.all = todoList; 
-                console.log(this.all)
+                this.all = todoList;
             } catch (error) {
                 console.error('Error fetching todos:', error);
             } finally {
                 this.isLoading = false
             }
+        },
+
+        async addNewTodo(todo: Todo){
+            try {
+                await todos.addTodo()
+                this.all.push(todo)
+            } catch (error) {
+                console.error('Error adding todo:', error);
+            } 
         },
     
         async setDone(id: number) {
