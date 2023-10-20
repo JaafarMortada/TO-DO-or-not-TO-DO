@@ -1,9 +1,10 @@
 <script setup lang="ts">
-
+  import Navbar from "./components/Navbar.vue";
 </script>
 
 <template>
-  <div class="flex justify-center text-xl font-bold">
-    TO-DO-or-not-TO-DO
+  <div class="flex flex-col gap-5">
+    <Navbar />
+    <router-view></router-view>
   </div>
 </template>
