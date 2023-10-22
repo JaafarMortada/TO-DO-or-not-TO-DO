@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import LoginForm from "../components/forms/LoginForm.vue"
+
   export default defineComponent({
     name: "Login",
     components:{
@@ -9,6 +10,13 @@ import LoginForm from "../components/forms/LoginForm.vue"
   })
 </script>
 
+<script setup lang="ts">
+import { useTodosStore } from '../store';
+const store = useTodosStore()
+
+store.resetStore()
+localStorage.clear()
+</script>
 <template>
   <div class="flex flex-col justify-center items-center gap-5 text-xl font-bold">
     <p>LOGIN PAGE</p> 
