@@ -6,3 +6,8 @@ export interface Todo {
 }
 
 export interface Todos extends Array<Todo> { }
+
+export interface LoginForm {
+    email?: string | null;
+    password?: string | null;
+}
