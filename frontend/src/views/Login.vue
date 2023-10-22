@@ -1,15 +1,19 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
+import LoginForm from "../components/forms/LoginForm.vue"
   export default defineComponent({
     name: "Login",
     components:{
-      
+      LoginForm,
     }
   })
 </script>
 
 <template>
-  <div class="flex justify-center text-xl font-bold">
-    LOGIN PAGE
+  <div class="flex flex-col justify-center items-center gap-5 text-xl font-bold">
+    <p>LOGIN PAGE</p> 
+    <div class="w-[500px]">
+      <LoginForm/>
+    </div>
   </div>
 </template>
